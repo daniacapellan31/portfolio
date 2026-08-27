@@ -642,7 +642,10 @@ footer {
 @media (max-width: 768px) {
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 1.1;
+        text-align: center;
+        word-break: normal;
     }
 
     .hero p {
@@ -681,6 +684,39 @@ footer {
     body::after {
         font-size: 2.5rem;
     }
+}
+
+/* Mobile navbar */
+.navbar {
+    padding: 18px 7%;
+}
+
+.logo img {
+    width: 52px;
+    height: 52px;
+}
+
+.nav-links {
+    gap: 12px 18px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+}
+
+/* Mobile hero spacing */
+.hero {
+    padding-top: 70px;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 1.65rem;
+    line-height: 1.35;
 }
 
 /* Gallery container */
