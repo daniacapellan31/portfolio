@@ -1450,3 +1450,1809 @@ footer {
     filter:
         drop-shadow(0 6px 12px rgba(209,107,165,0.35));
 }
+
+
+/* =====================================================
+   DANIA PORTFOLIO — EDITORIAL HERO FINAL
+===================================================== */
+
+:root {
+    --cream: #fdf9f6;
+    --cream-soft: #f8efec;
+
+    --wine: #791634;
+    --wine-dark: #581126;
+
+    --rose: #cf718e;
+    --rose-light: #eed5dc;
+
+    --ink: #302027;
+    --text-soft: #685a60;
+
+    --white: #ffffff;
+}
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+body {
+    background: var(--cream);
+    color: var(--ink);
+}
+
+
+/* Remove old butterflies */
+
+.hero::before,
+.hero::after,
+body::before,
+body::after,
+.floating-butterfly {
+    display: none !important;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 104px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        rgba(253, 249, 246, 0.96);
+
+    border-bottom:
+        1px solid rgba(121, 22, 52, 0.07);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow: none;
+
+    z-index: 1000;
+}
+
+
+/* =====================================================
+   DR MONOGRAM
+===================================================== */
+
+.logo {
+    position: relative;
+
+    width: 80px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.logo img {
+    display: none !important;
+}
+
+.logo::before {
+    content: "DR";
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 3.2rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -0.15em;
+
+    color: var(--wine);
+}
+
+/* Small feminine botanical-like stroke */
+
+.logo::after {
+    content: "";
+
+    position: absolute;
+
+    left: -2px;
+    bottom: 11px;
+
+    width: 37px;
+    height: 1px;
+
+    background: var(--rose);
+
+    transform:
+        rotate(-50deg);
+
+    transform-origin:
+        left center;
+}
+
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+
+    padding: 11px 0;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.12rem;
+    font-weight: 500;
+
+    color: var(--ink);
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--rose);
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--wine);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+    height: auto;
+
+    padding:
+        135px
+        0
+        0
+        5%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.06fr)
+        minmax(540px, 0.94fr);
+
+    align-items: center;
+
+    gap: 18px;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 95% 8%,
+            rgba(207, 113, 142, 0.07),
+            transparent 23%
+        ),
+        linear-gradient(
+            108deg,
+            #fffdfa 0%,
+            #fdf9f6 55%,
+            #faf2ef 100%
+        );
+
+    animation: none;
+}
+
+
+/* =====================================================
+   HERO LEFT SIDE
+===================================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 790px;
+
+    padding-bottom: 48px;
+}
+
+
+/* Eyebrow */
+
+.hero-eyebrow {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    color: var(--rose);
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    letter-spacing: 0.31em;
+
+    text-transform: uppercase;
+}
+
+
+/* Name */
+
+.hero h1 {
+    margin: 0;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(5.1rem, 7vw, 7.6rem);
+
+    font-weight: 600;
+
+    line-height: 0.79;
+
+    letter-spacing: -0.045em;
+
+    color: var(--wine);
+
+    text-shadow: none;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--wine);
+}
+
+
+/* Small line under name */
+
+.hero-line {
+    width: 110px;
+    height: 2px;
+
+    margin:
+        30px
+        0
+        24px;
+
+    background: var(--rose);
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+/* Job titles */
+
+.hero h2 {
+    margin:
+        0
+        0
+        17px;
+
+    max-width: 760px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(1.42rem, 1.75vw, 1.75rem);
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    color: var(--ink);
+}
+
+.hero h2::after {
+    display: none !important;
+}
+
+.hero h2 span {
+    margin: 0 8px;
+
+    color: var(--wine);
+}
+
+
+/* Description */
+
+.hero .hero-description {
+    max-width: 650px;
+
+    margin:
+        0
+        0
+        27px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.30rem;
+
+    line-height: 1.42;
+
+    color: var(--text-soft);
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 26px;
+}
+
+.btn,
+.btn-secondary {
+    min-height: 53px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        0
+        30px;
+
+    border-radius: 24px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Main button */
+
+.btn {
+    min-width: 230px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            95deg,
+            #76152f,
+            #8c2445
+        );
+
+    box-shadow:
+        0 12px 28px
+        rgba(118, 21, 47, 0.15);
+}
+
+.btn:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        linear-gradient(
+            95deg,
+            #651027,
+            #791634
+        );
+
+    box-shadow:
+        0 17px 32px
+        rgba(118, 21, 47, 0.20);
+}
+
+.button-arrow {
+    margin-left: 23px;
+
+    font-size: 1.45rem;
+
+    font-weight: 300;
+}
+
+
+/* Secondary button */
+
+.btn-secondary {
+    min-width: 190px;
+
+    border:
+        1px solid
+        var(--rose);
+
+    color: var(--wine);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.48
+        );
+}
+
+.btn-secondary:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--white);
+}
+
+
+/* =====================================================
+   TECH PILLS
+===================================================== */
+
+.hero-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.hero-tech span {
+    padding:
+        7px
+        14px;
+
+    border:
+        1px solid
+        rgba(207, 113, 142, 0.20);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 248, 248, 0.82);
+
+    color: #613544;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 0.91rem;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   PHOTO PANEL — EDITORIAL COMPOSITION
+===================================================== */
+
+.hero-photo-panel {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 690px;
+    height: calc(100vh - 135px);
+    max-height: 780px;
+
+    align-self: end;
+
+    overflow: hidden;
+
+    border-radius:
+        215px
+        0
+        0
+        0;
+
+    background: #f3e3e0;
+}
+
+
+/* =====================================================
+   PHOTO — FULL BLEED
+===================================================== */
+
+.hero-photo {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: cover;
+
+    /*
+       Moves the composition slightly right so the face
+       remains prominent while the laptop stays visible.
+    */
+    object-position: 52% center;
+
+    margin: 0;
+
+    transform: none;
+
+    filter: none;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   SOFT EDITORIAL LIGHT
+===================================================== */
+
+.hero-photo-panel::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(253, 249, 246, 0.17) 0%,
+            transparent 25%,
+            transparent 82%,
+            rgba(255, 235, 232, 0.10) 100%
+        );
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+/* =====================================================
+   SUBTLE FOREGROUND BLUR
+===================================================== */
+
+.hero-photo-panel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 300px;
+
+    right: -105px;
+    bottom: -70px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(202, 149, 153, 0.20);
+
+    filter: blur(42px);
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   EDITORIAL ORBIT
+===================================================== */
+
+.hero-orbit {
+    position: absolute;
+
+    width: 610px;
+    height: 610px;
+
+    left: -320px;
+    top: 35px;
+
+    border:
+        1px solid
+        rgba(190, 80, 115, 0.56);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+
+/* =====================================================
+   SOFT BLUSH SHAPE
+===================================================== */
+
+.hero-blush {
+    position: absolute;
+
+    width: 460px;
+    height: 460px;
+
+    right: -260px;
+    top: 125px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(223, 183, 190, 0.13);
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1500px) {
+
+    .hero {
+        padding-left: 7%;
+    }
+
+    .hero-content {
+        max-width: 840px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALLER DESKTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(440px, 0.86fr);
+
+        padding-left: 5%;
+
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(
+                4.6rem,
+                6vw,
+                6.3rem
+            );
+    }
+
+    .hero-photo-panel {
+        min-height: 620px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE / TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: 84px;
+
+        padding:
+            0
+            6%;
+    }
+
+    .hero {
+        min-height: auto;
+
+        grid-template-columns:
+            1fr;
+
+        padding:
+            125px
+            7%
+            55px;
+
+        gap: 42px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+
+        padding-bottom: 0;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(
+                4rem,
+                15vw,
+                5.4rem
+            );
+    }
+
+    .hero-photo-panel {
+        width: 100%;
+
+        min-height: 510px;
+        height: 510px;
+
+        border-radius:
+            170px
+            170px
+            28px
+            28px;
+    }
+
+    .hero-photo {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   REAL LOGO IMAGE — TOP LEFT
+===================================================== */
+
+.logo {
+    position: relative !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    text-decoration: none !important;
+}
+
+.logo::before,
+.logo::after {
+    display: none !important;
+    content: none !important;
+}
+
+.logo img,
+.site-logo {
+    display: block !important;
+
+    width: 84px !important;
+    height: auto !important;
+
+    object-fit: contain !important;
+}
+
+/* Optional fine adjustment for navbar alignment */
+.navbar {
+    align-items: center !important;
+}
+
+@media (max-width: 850px) {
+    .logo img,
+    .site-logo {
+        width: 72px !important;
+    }
+}
+
+
+/* =====================================================
+   HERO RIGHT PANEL — MATCH REFERENCE
+===================================================== */
+
+.hero {
+    grid-template-columns:
+        minmax(0, 1.03fr)
+        minmax(560px, 0.97fr) !important;
+
+    gap: 14px !important;
+
+    align-items: center !important;
+}
+
+.hero .hero-photo-panel {
+    position: relative !important;
+
+    width: min(100%, 700px) !important;
+
+    aspect-ratio: 1402 / 1122 !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+
+    justify-self: end !important;
+    align-self: center !important;
+
+    display: block !important;
+
+    overflow: hidden !important;
+
+    border-radius:
+        215px
+        0
+        0
+        0 !important;
+
+    background: #f4e6e3 !important;
+}
+
+.hero .hero-photo {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    object-position: center center !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+
+    filter: none !important;
+
+    z-index: 3 !important;
+}
+
+/* Soft blur in lower-left foreground so it feels integrated */
+.hero .hero-photo-panel::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 320px !important;
+    height: 230px !important;
+
+    left: -24px !important;
+    bottom: -18px !important;
+
+    border-radius: 50% !important;
+
+    background:
+        rgba(255, 250, 248, 0.92) !important;
+
+    filter: blur(26px) !important;
+
+    z-index: 4 !important;
+
+    pointer-events: none !important;
+}
+
+/* Very subtle blur on right */
+.hero .hero-photo-panel::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 170px !important;
+    height: 250px !important;
+
+    right: -70px !important;
+    bottom: -40px !important;
+
+    border-radius: 50% !important;
+
+    background:
+        rgba(206, 159, 162, 0.18) !important;
+
+    filter: blur(34px) !important;
+
+    z-index: 4 !important;
+
+    pointer-events: none !important;
+}
+
+/* Orbit like the reference */
+.hero .hero-orbit {
+    width: 610px !important;
+    height: 610px !important;
+
+    left: -310px !important;
+    top: 24px !important;
+
+    border:
+        1px solid rgba(190, 80, 115, 0.56) !important;
+
+    z-index: 4 !important;
+
+    pointer-events: none !important;
+}
+
+/* Softer blush shape */
+.hero .hero-blush {
+    width: 390px !important;
+    height: 390px !important;
+
+    right: -210px !important;
+    top: 160px !important;
+
+    border-radius: 50% !important;
+
+    background:
+        rgba(223, 183, 190, 0.12) !important;
+
+    z-index: 2 !important;
+
+    pointer-events: none !important;
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(470px, 0.92fr) !important;
+
+        gap: 18px !important;
+    }
+
+    .hero .hero-photo-panel {
+        width: min(100%, 620px) !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .hero {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+    }
+
+    .hero .hero-photo-panel {
+        width: 100% !important;
+
+        border-radius:
+            170px
+            170px
+            28px
+            28px !important;
+    }
+}
+
+
+/* =====================================================
+   ABOUT — EDITORIAL
+===================================================== */
+
+.about-editorial {
+    position: relative;
+
+    padding:
+        125px
+        7%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffdfa 0%,
+            #fbf5f3 100%
+        );
+
+    color: var(--ink);
+}
+
+.about-heading {
+    max-width: 760px;
+
+    margin-bottom: 70px;
+}
+
+.section-eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--rose);
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    letter-spacing: 0.30em;
+}
+
+.about-editorial h2 {
+    margin: 0;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(3.6rem, 5vw, 5.5rem);
+
+    font-weight: 600;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.035em;
+
+    color: var(--ink);
+}
+
+.about-editorial h2::after {
+    display: none;
+}
+
+.about-editorial h2 span {
+    display: block;
+
+    color: var(--wine);
+}
+
+
+/* Two columns */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(420px, 1.05fr);
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* Story */
+
+.about-story {
+    max-width: 650px;
+}
+
+.about-story p {
+    margin-bottom: 24px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.28rem;
+
+    line-height: 1.65;
+
+    color: var(--text-soft);
+}
+
+.about-story .about-lead {
+    font-size: 1.55rem;
+
+    line-height: 1.5;
+
+    color: var(--ink);
+}
+
+
+/* Strengths */
+
+.about-strengths {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.strength-item {
+    display: grid;
+
+    grid-template-columns:
+        52px
+        1fr;
+
+    gap: 22px;
+
+    padding:
+        28px
+        0;
+
+    border-bottom:
+        1px solid
+        rgba(121, 22, 52, 0.12);
+}
+
+.strength-item:first-child {
+    border-top:
+        1px solid
+        rgba(121, 22, 52, 0.12);
+}
+
+.strength-item > span {
+    padding-top: 3px;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--rose);
+
+    font-size: 0.70rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+}
+
+.strength-item h3 {
+    margin:
+        0
+        0
+        8px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.65rem;
+
+    font-weight: 600;
+
+    color: var(--wine);
+}
+
+.strength-item p {
+    margin: 0;
+
+    max-width: 520px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+    color: var(--text-soft);
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .about-editorial {
+        padding:
+            95px
+            7%;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .about-heading {
+        margin-bottom: 50px;
+    }
+
+}
+
+
+/* =====================================================
+   FEATURED PROJECT — ROOT MIRACLE
+===================================================== */
+
+.featured-project {
+    padding:
+        125px
+        7%;
+
+    background:
+        #fffdfa;
+}
+
+.featured-project-heading {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 55px;
+}
+
+.featured-project-heading h2 {
+    margin: 0;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(3.8rem, 5vw, 5.8rem);
+
+    font-weight: 600;
+
+    line-height: 0.92;
+
+    letter-spacing: -0.04em;
+
+    color: var(--ink);
+}
+
+.featured-project-heading h2::after {
+    display: none;
+}
+
+.featured-project-heading h2 span {
+    display: block;
+
+    color: var(--wine);
+}
+
+
+/* Live link */
+
+.project-link {
+    flex-shrink: 0;
+
+    margin-bottom: 8px;
+
+    padding-bottom: 5px;
+
+    border-bottom:
+        1px solid
+        rgba(121, 22, 52, 0.35);
+
+    color: var(--wine);
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.12rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* Main visual */
+
+.featured-project-visual {
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 65px;
+
+    border-radius: 30px;
+
+    background:
+        #f5e8e5;
+
+    box-shadow:
+        0 28px 70px
+        rgba(82, 42, 54, 0.10);
+}
+
+.featured-main-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* Information grid */
+
+.featured-project-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        60px
+        90px;
+
+    margin-bottom: 65px;
+}
+
+.project-story,
+.project-details > div {
+    border-top:
+        1px solid
+        rgba(121, 22, 52, 0.14);
+
+    padding-top: 20px;
+}
+
+.project-label {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: var(--rose);
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size: 0.70rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.20em;
+}
+
+.project-story p {
+    margin: 0;
+
+    max-width: 590px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.28rem;
+
+    line-height: 1.55;
+
+    color: var(--text-soft);
+}
+
+
+/* Details */
+
+.project-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 55px;
+
+    grid-column:
+        1 / -1;
+}
+
+
+/* Tech tags */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.project-tech span {
+    padding:
+        7px
+        13px;
+
+    border:
+        1px solid
+        rgba(207, 113, 142, 0.20);
+
+    border-radius: 999px;
+
+    color: var(--wine);
+
+    background:
+        #fff8f8;
+
+    font-size: 0.85rem;
+}
+
+
+/* Demonstrates */
+
+.project-details ul {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.project-details li {
+    position: relative;
+
+    margin-bottom: 8px;
+
+    padding-left: 17px;
+
+    color: var(--text-soft);
+
+    font-size: 0.92rem;
+}
+
+.project-details li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0.66em;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--rose);
+}
+
+
+/* Gallery */
+
+.featured-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+.featured-gallery img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(82, 42, 54, 0.08);
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .featured-project {
+        padding:
+            95px
+            7%;
+    }
+
+    .featured-project-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .featured-project-info,
+    .project-details,
+    .featured-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project-info {
+        gap: 45px;
+    }
+
+}
+
+
+/* =====================================================
+   PROJECTS — REMOVE LEGACY LAYOUT
+===================================================== */
+
+.projects.projects-editorial {
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+}
+
+.projects.projects-editorial > .section-title {
+    display: none !important;
+}
+
+/* Featured project now begins immediately after About */
+.projects-editorial .featured-project {
+    margin: 0 !important;
+
+    padding:
+        105px
+        7%
+        120px !important;
+}
+
+/* Prevent old generic project styles from affecting
+   the new featured project */
+.featured-project .project-content {
+    all: unset;
+}
+
+
+/* =====================================================
+   ABOUT → PROJECTS TRANSITION
+===================================================== */
+
+.about-editorial {
+    padding-bottom: 95px !important;
+}
+
+.projects-editorial {
+    border-top:
+        1px solid
+        rgba(121, 22, 52, 0.07);
+}
+
+
+/* =====================================================
+   ROOT MIRACLE — REDUCIR TAMAÑO DE IMÁGENES
+===================================================== */
+
+/* imagen principal */
+.featured-project-visual {
+    max-width: 1180px !important;
+    margin: 0 auto 55px !important;
+}
+
+/* para que no se vea tan dominante */
+.featured-main-image {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* galería secundaria */
+.featured-gallery {
+    max-width: 1080px !important;
+    margin: 0 auto !important;
+    gap: 22px !important;
+}
+
+/* imágenes secundarias más compactas */
+.featured-gallery img {
+    width: 100% !important;
+    height: 320px !important;
+    object-fit: cover !important;
+}
+
+/* en pantallas medianas */
+@media (max-width: 1100px) {
+    .featured-project-visual {
+        max-width: 1000px !important;
+    }
+
+    .featured-gallery {
+        max-width: 960px !important;
+    }
+
+    .featured-gallery img {
+        height: 280px !important;
+    }
+}
+
+/* en móvil */
+@media (max-width: 900px) {
+    .featured-project-visual,
+    .featured-gallery {
+        max-width: 100% !important;
+    }
+
+    .featured-gallery img {
+        height: auto !important;
+    }
+}
+
+
+/* =====================================================
+   QUOTEWING — FEATURED PROJECT
+===================================================== */
+
+.quotewing-project {
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbf6f4 0%,
+            #fffdfa 100%
+        ) !important;
+
+    border-top:
+        1px solid
+        rgba(121, 22, 52, 0.08);
+}
+
+.quotewing-main-visual {
+    max-width: 1120px !important;
+
+    margin:
+        0
+        auto
+        55px !important;
+
+    border-radius: 26px !important;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 24px 60px
+        rgba(66, 56, 108, 0.10) !important;
+}
+
+.quotewing-main-visual img {
+    width: 100% !important;
+    height: auto !important;
+
+    display: block !important;
+}
+
+
+/* Gallery */
+
+.quotewing-gallery {
+    max-width: 1080px !important;
+
+    margin: 0 auto !important;
+
+    align-items: start;
+}
+
+.quotewing-gallery figure {
+    margin: 0;
+}
+
+.quotewing-gallery img {
+    width: 100% !important;
+
+    height: 320px !important;
+
+    object-fit: cover !important;
+
+    object-position: top center !important;
+
+    border-radius: 20px !important;
+}
+
+.quotewing-gallery figcaption {
+    margin-top: 12px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 1.12rem;
+    font-weight: 600;
+
+    color: var(--wine);
+}
+
+
+/* QuoteWing-specific visual accent */
+
+.quotewing-project .section-eyebrow,
+.quotewing-project .project-label {
+    color: #7465e8;
+}
+
+.quotewing-project .project-tech span {
+    border-color:
+        rgba(116, 101, 232, 0.20);
+
+    background:
+        rgba(245, 243, 255, 0.72);
+
+    color: #50469e;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .quotewing-main-visual,
+    .quotewing-gallery {
+        max-width: 100% !important;
+    }
+
+    .quotewing-gallery img {
+        height: auto !important;
+    }
+
+}
+
