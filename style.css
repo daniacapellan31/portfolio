@@ -4273,3 +4273,24 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* ==========================================
+   MOBILE HERO — CLEAR PORTRAIT
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    .hero .hero-photo-panel::before {
+        opacity: 0 !important;
+    }
+
+    .hero .hero-photo-panel::after {
+        opacity: 0.12 !important;
+    }
+
+    .hero .hero-photo {
+        filter: none !important;
+        opacity: 1 !important;
+    }
+
+}
