@@ -4446,3 +4446,18 @@ html {
     background: var(--wine) !important;
     border-color: var(--wine) !important;
 }
+
+/* QuoteWing personal project description */
+.quotewing-personal-intro {
+    max-width: 720px;
+    margin: 22px 0 38px;
+}
+
+.quotewing-personal-intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+    line-height: 1.5;
+    color: var(--text-soft);
+    font-weight: 400;
+    margin: 0;
+}
