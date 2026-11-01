@@ -4407,3 +4407,42 @@ html {
 .footer-inner{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:8px!important;text-align:center!important;}
 .footer-inner span{display:block!important;width:100%!important;text-align:center!important;}
 }
+
+/* Anchor navigation offset - Butterfly Logic Tech */
+#services {
+    scroll-margin-top: 115px;
+}
+
+/* Navigation offsets for fixed header */
+#home,
+#about,
+#projects,
+#skills,
+#contact {
+    scroll-margin-top: 115px;
+}
+
+
+/* Button hover fix - Butterfly Logic Tech */
+.btn,
+.btn:visited {
+    color: #ffffff !important;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    color: #ffffff !important;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+    color: var(--wine) !important;
+    background: transparent !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    color: #ffffff !important;
+    background: var(--wine) !important;
+    border-color: var(--wine) !important;
+}
