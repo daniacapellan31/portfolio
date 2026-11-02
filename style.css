@@ -3258,7 +3258,7 @@ body::after,
 
 
 /* ===== QUOTEWING HERO: menos alto, mismo ancho ===== */
-img[src*="quotewing-landing.png"] {
+img[src*="quotewing-landing.webp"] {
     display: block;
     width: 100%;
     height: 540px;
